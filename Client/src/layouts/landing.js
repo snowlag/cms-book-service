@@ -22,7 +22,7 @@ import propTypes from "prop-types";
 import { useForm, ErrorMessage, Controller } from "react-hook-form";
 //Bring Axios
 import axios from 'axios';
-
+import Paper from '@material-ui/core/Paper';
 
 const styles = {
   root:{
@@ -47,7 +47,20 @@ const styles = {
     fontFamily: "'Roboto', 'Helvetica', 'Arial', sans-serif",
     marginBottom: "3px",
     textDecoration: "none"
-  }
+  },
+  header: {
+    marginTop: "5%",
+   
+  },
+  book: {
+    marginTop: "5%",
+    width:"500", 
+    height: "600"
+  },
+  bookimage: {
+    width:"500px", 
+    height: "400px"
+  },
 };
 
 const useStyles = makeStyles(styles);
@@ -79,13 +92,13 @@ const LandingPage =  (props) => {
   
   const classes = useStyles();
   return (
-    <Container>
-     <Typography classname={classes.header} variant="h1" component="h2" align="center" color="textSecondary" gutterBottom>
-        Welcome to Book CMS
-      </Typography>
-      <form onSubmit={handleSubmit(onSubmit)}>
-      <GridContainer justify="center">
-        <GridItem xs={12} sm={12} md={6}>
+    <Container className = {classes.backimage} >
+      <form className={classes.header} onSubmit={handleSubmit(onSubmit)}>
+      <GridContainer >
+        {/* <GridItem xs={12} sm={12} md={6}>       
+            <img className = {classes.bookimage} src="https://www.pingara.com/storage/app/media/uploaded-files/books.jpg" />
+        </GridItem> */}
+        <GridItem xs={12} sm={6} md={6}>
           <Card>
             <CardHeader color="rose">
               <h2 className={classes.cardTitleWhite}>Login</h2>
@@ -129,7 +142,11 @@ const LandingPage =  (props) => {
             </CardFooter>
           </Card>
         </GridItem>
-      </GridContainer>
+        <GridItem xs={12} sm={6} md={6}>       
+            <img className = {classes.bookimage} src="https://www.incimages.com/uploaded_files/image/1920x1080/getty_508400521_2000133320009280263_305526.jpg" />
+        </GridItem>
+       </GridContainer>
+      
       </form>
     </Container>
   );

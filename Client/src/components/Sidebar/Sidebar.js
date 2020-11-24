@@ -121,7 +121,7 @@ export default function Sidebar(props) {
           {image !== undefined ? (
             <div
               className={classes.background}
-              style={{ backgroundImage: "url(" + image + ")" }}
+              style={{ backgroundImage: "url(https://bookcms-bucket.s3.ap-south-1.amazonaws.com/Poster/sidebar-5-1606242915318.jpg)"}}
             />
           ) : null}
         </Drawer>
@@ -146,7 +146,7 @@ export default function Sidebar(props) {
           {image !== undefined ? (
             <div
               className={classes.background}
-              style={{ backgroundImage: "url(" + image + ")" }}
+              style={{ backgroundImage: "url(https://bookcms-bucket.s3.ap-south-1.amazonaws.com/Poster/sidebar-5-1606242915318.jpg)"}}
             />
           ) : null}
         </Drawer>
