@@ -25,7 +25,7 @@ import propTypes from "prop-types";
 import { CircularProgress } from "@material-ui/core";
 import { LinearProgress } from '@material-ui/core';
 import {GetSearches} from "../../actions/Books.js"
-import styles from "assets/jss/material-dashboard-react/components/headerLinksStyle.js";
+import styles from "assets/jss/material-dashboard-react/components/headerLinksStyle.js"; 
 const useStyles = makeStyles(styles);
 
 const AdminNavbarLinks = (props) => {
