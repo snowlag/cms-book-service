@@ -1,7 +1,7 @@
 //Run these file only initially 
 //Do no run these file again , you will loose counter
 
-const keys = require('../config/Keys.js');
+const keys = require('../config/keys.js');
 const AWS = require('aws-sdk');
 const uuid = require("uuid");
 

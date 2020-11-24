@@ -1,6 +1,6 @@
 const AWS = require('aws-sdk');
 const uuid = require("uuid");
-const keys = require('../config/Keys.js');
+const keys = require('../config/keys.js');
 const timestamp = require('./getTime.js');
 
 

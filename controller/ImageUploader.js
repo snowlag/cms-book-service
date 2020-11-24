@@ -6,7 +6,7 @@ const url = require('url');
 const AWS = require('aws-sdk');
 const sharp = require('sharp');
 
-const keys = require('../config/Keys.js');
+const keys = require('../config/keys.js');
 AWS.config.update({
   region: "ap-south-1",
   accessKeyId : keys.AWS_ACCESS_KEY,
