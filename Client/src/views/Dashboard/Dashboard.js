@@ -44,6 +44,7 @@ const  Dashboard = (props) =>{
   const [index , setIndex] = React.useState(-1);
   const [disabled , setNext ] = React.useState(true)
   const [prevItems , setPrev] = React.useState([])
+  const [flag , setFlag] = React.useState(false)
 
 
 
@@ -53,7 +54,6 @@ const  Dashboard = (props) =>{
     var lastIndexKey = arr[index];
     setPrev(categories);
     props.GetCategories( lastIndexKey)
-    
    }
 
    
@@ -62,6 +62,7 @@ const  Dashboard = (props) =>{
     props.clearCategories();
     props.GetCategories(items);
     props.Getstats();
+    setFlag(true)
   } ,[props.auth])
   
 useEffect( () => {
@@ -82,20 +83,22 @@ useEffect( () => {
 
   
 useEffect( () => {
-  // Logic to disable buuton at last page
-   if(!props.categories.Key){
-     //disable the button next
-     setNext(true);
-   }else{
-     setNext(false)
-   }
- 
-   //Push the next key in array
- setIndex(index+1)
- setArr([ ...arr , props.categories.Key])
- prevItems.push.apply(prevItems, props.categories.Categories);
- setCategories(prevItems);
-   setLoading(false);
+  if(flag){
+    if(!props.categories.Key){
+      //disable the button next
+      setNext(true);
+    }else{
+      setNext(false)
+    }
+  
+    //Push the next key in array
+  setIndex(index+1)
+  setArr([ ...arr , props.categories.Key])
+  prevItems.push.apply(prevItems, props.categories.Categories);
+  setCategories(prevItems);
+    setLoading(false);
+  }
+  
  }, [props.categories])
 
 

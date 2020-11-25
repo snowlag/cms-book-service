@@ -23,6 +23,7 @@ import { useForm, ErrorMessage, Controller } from "react-hook-form";
 //Bring Axios
 import axios from 'axios';
 import Paper from '@material-ui/core/Paper';
+import Footer from "components/Footer/Footer.js";
 
 const styles = {
   root:{
@@ -61,6 +62,9 @@ const styles = {
     width:"500px", 
     height: "400px"
   },
+  footer: {
+    marginTop: "10%"
+  }
 };
 
 const useStyles = makeStyles(styles);
@@ -148,6 +152,9 @@ const LandingPage =  (props) => {
        </GridContainer>
       
       </form>
+      <div className={classes.footer}>
+      <Footer />
+      </div>
     </Container>
   );
 }

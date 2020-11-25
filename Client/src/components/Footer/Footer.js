@@ -18,23 +18,18 @@ export default function Footer(props) {
         <div className={classes.left}>
           <List className={classes.list}>
             <ListItem className={classes.inlineBlock}>
-              <a href="#home" className={classes.block}>
-                Home
+              <a href="https://github.com/snowlag" target="_blank" className={classes.block}>
+                Github
               </a>
             </ListItem>
             <ListItem className={classes.inlineBlock}>
-              <a href="#company" className={classes.block}>
-                Company
+              <a href="https://www.linkedin.com/in/ankit-j-013332129/" target="_blank" className={classes.block}>
+                Linkedin
               </a>
             </ListItem>
             <ListItem className={classes.inlineBlock}>
-              <a href="#portfolio" className={classes.block}>
-                Portfolio
-              </a>
-            </ListItem>
-            <ListItem className={classes.inlineBlock}>
-              <a href="#blog" className={classes.block}>
-                Blog
+              <a href="http://blitzhub.herokuapp.com/" target="_blank" className={classes.block}>
+                Blitzhub
               </a>
             </ListItem>
           </List>
@@ -47,9 +42,9 @@ export default function Footer(props) {
               target="_blank"
               className={classes.a}
             >
-              Creative Tim
+              Ankit Joshi and Himanshu magar
             </a>
-            , made with love for a better web
+            , made with love for better web
           </span>
         </p>
       </div>
