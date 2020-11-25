@@ -18,7 +18,7 @@ export default function Footer(props) {
         <div className={classes.left}>
           <List className={classes.list}>
             <ListItem className={classes.inlineBlock}>
-              <a href="https://github.com/snowlag" target="_blank" className={classes.block}>
+              <a href="https://github.com/snowlag/cms-book-service" target="_blank" className={classes.block}>
                 Github
               </a>
             </ListItem>
